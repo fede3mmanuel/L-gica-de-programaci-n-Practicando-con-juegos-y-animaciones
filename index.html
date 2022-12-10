@@ -4,20 +4,19 @@
 
 <script>
 
-    function dibujarCuadradoVerde(params) {
+    function dibujarCuadrado(x,y,color) {
         var pantalla = document.querySelector('canvas');
         var pincel = pantalla.getContext("2d");
 
-        pincel.fillStyle = "green"
-        pincel.fillRect(0,0,50,50);
-        pincel.strokeStyle = 'black';
-        pincel.strokeRect(0,0,50,50);
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
 
     }
 
-    dibujarCuadradoVerde();
-    dibujarCuadradoVerde();
-    dibujarCuadradoVerde();
-    dibujarCuadradoVerde();
+    dibujarCuadrado(0,0,"green");
+    dibujarCuadrado(50,0, "green");
+    dibujarCuadrado(100,0, "green");
 
 </script>
