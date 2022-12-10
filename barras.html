@@ -29,9 +29,20 @@
     function drawAll() {
         let guiay = 50;
 
+        escribirTexto(50,guiay-10,2009)
         for (let x = 0; x < serie2009.length; x++) {
             dibujarRectangulo(50,guiay,50,serie2009[x], colores[x])
             guiay = guiay + serie2009[x]
+        }
+
+
+        guiay = 50;
+
+        escribirTexto(200,guiay-10,2019)
+
+        for (let x = 0; x < serie2019.length; x++) {
+            dibujarRectangulo(200,guiay,50,serie2019[x], colores[x])
+            guiay = guiay + serie2019[x]
         }
     }
 
