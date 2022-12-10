@@ -15,8 +15,17 @@
 
     }
 
-    dibujarCuadrado(0,0,"green");
-    dibujarCuadrado(50,0, "green");
-    dibujarCuadrado(100,0, "green");
+    // var x = 0;
+    // while(x<600){
+    //     dibujarCuadrado(x,0,"red");
+    //     dibujarCuadrado(x,50,"yellow");
+    //     dibujarCuadrado(x,100,"green");
+    //     x = x + 50;
+    // }
 
+    for (let x = 0; x < 600; x = x + 50) {
+        dibujarCuadrado(x,0,"red");
+        dibujarCuadrado(x,50,"yellow");
+        dibujarCuadrado(x,100,"green");        
+    }
 </script>
