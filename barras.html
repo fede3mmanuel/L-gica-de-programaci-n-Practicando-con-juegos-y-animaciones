@@ -26,20 +26,15 @@
 
     var colores = ["blue","green","yellow", "red","gray"];
 
-    function dibujarBarra(x, y, serie, colores, texto) {
+    function drawAll() {
+        let guiay = 50;
 
+        for (let x = 0; x < serie2009.length; x++) {
+            dibujarRectangulo(50,guiay,50,serie2009[x], colores[x])
+            guiay = guiay + serie2009[x]
+        }
     }
 
-    dibujarBarra(50, 50, serie2009, colores, "2009");
-    dibujarBarra(150, 50, serie2019, colores, "2019");
-
-    let guiay = 350;
-    for (let x = 0; x < serie2009.length; x++) {
-        dibujarRectangulo(50,guiay,50,serie2009[x], colores[x])
-        guiay = guiay - serie2009[x]
-        console.log(guiay);
-    }
-
-    //Aquí viene el texto faltante
+    drawAll()
 
 </script>
