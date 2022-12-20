@@ -22,10 +22,14 @@
 
             var x = evento.pageX - pantalla.offsetLeft;
             var y = evento.pageY - pantalla.offsetTop;
+            console.log('The x is : '+ x);
+            console.log('The y is:' + y);
             if ((x < 50) && (y < 50)) {
-                console.log('The x is : '+ x);
-                console.log('The y is:' + y);
+                
                 colorToUse = 'red';
+            }
+            else if ((x > 50) && (x < 100) && (y < 50)) {
+                colorToUse = 'green';
             }
 
             pincel.fillStyle = colorToUse;
