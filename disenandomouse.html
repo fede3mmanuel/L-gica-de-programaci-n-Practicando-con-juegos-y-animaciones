@@ -14,16 +14,25 @@
     pincel.fillRect(100, 0, 50, 50);
 
     var puedoDibujar = false;
+    colorToUse = 'blue';
 
     function dibujarCirculo(evento) {
 
         if(puedoDibujar) {
+
             var x = evento.pageX - pantalla.offsetLeft;
             var y = evento.pageY - pantalla.offsetTop;
-            pincel.fillStyle = 'blue';
+            if ((x < 50) && (y < 50)) {
+                console.log('The x is : '+ x);
+                console.log('The y is:' + y);
+                colorToUse = 'red';
+            }
+
+            pincel.fillStyle = colorToUse;
             pincel.beginPath();
             pincel.arc(x, y, 5, 0, 2 * 3.14);
             pincel.fill();
+
         }
 
     }
