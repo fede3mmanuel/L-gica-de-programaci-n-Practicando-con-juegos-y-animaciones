@@ -23,10 +23,15 @@
 
         limpiarPantalla();
         disenharCircunferencia(x,20,10);
-        x++;
+        
+        if (x > 610) {
+            x = 0
+        } else {
+            x++;
+        }
         
     }
     
-    setInterval(actualizarPantalla, 100)
+    setInterval(actualizarPantalla, 25)
     
 </script>
